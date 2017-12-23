@@ -1,0 +1,197 @@
+footer .market span{
+    background: url(/static/base/img/market1.png) no-repeat;
+    background-size:0.513889rem;
+}
+body{
+    background: white !important;
+    position: absolute;
+}
+footer .market{
+    color: gold;
+}
+#div_market{
+    width: 100%;
+    height: 16rem;
+    padding: 1px;
+}
+
+#div_market_left{
+    margin-top: 1.5rem;
+    width: 2.3rem;
+    height: 100%;
+    background: white;
+    position: fixed;
+}
+.foottype_name{
+    width: 100%;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    text-align: center;
+    font-size: 0.4rem;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+}
+.green{
+    position: absolute;
+    top: 0.15rem;
+    left: 0;
+    width: 0.1rem;
+    height: 1rem;
+    background: yellow;
+}
+
+#div_market_right{
+    width: 7.6rem;
+    margin-left: 2.4rem;
+    margin-top: 1.5rem;
+    height:100% ;
+    padding: 1px;
+}
+#div_right_top{
+    width: 7.555rem;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    text-align: center;
+    position: fixed;
+    margin-top: -0.1rem;
+    z-index: 999;
+}
+#div_right_top div{
+    width: 50%;
+    float: left;
+    background: white;
+}
+#div_right_top_right{
+    height: 1.3rem;
+}
+
+#div_right_top_left{
+    height: 1.3rem;
+}
+
+#div_right_bottem{
+    width: 100%;
+    height: 85%;
+    margin-top: 1.3rem;
+    background: white;
+}
+
+.div_dropdown{
+    line-height: 1.3rem;
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+#goods_list{
+    width: 100%;
+    height: 2.8rem;
+    border-top: 1px solid #ccc;
+}
+
+#goods_list div{
+    height: 100%;
+    width: 100%;
+}
+
+.img_show{
+    width: 2.8rem;
+    height: 2.75rem;
+}
+#div_goodslist_one{
+    width: 100% !important;
+
+}
+#div_goodslist_two{
+    width: 4.72rem !important;
+    float: right;
+    background: white;
+    padding: 1px;
+}
+.p_one{
+    margin-top: 0.6rem;
+    overflow: hidden;
+    height: 0.7rem;
+}
+#none{
+    height: 1.5rem;
+    width: 100%;
+}
+
+#goods_container{
+    overflow: hidden;
+}
+
+#top_span{
+    width: 100%;
+    height: 1.2rem;
+    background: gold;
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 9999;
+}
+
+#div_top{
+    position: fixed;
+    width: 100%;
+    height: 1.2rem;
+    z-index: 9999;
+}
+#p_goods_price{
+    color: red;
+}
+#div_goods_num{
+    height: 1rem !important;
+    width: 4rem !important;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    margin-top: -0.5rem;
+    position: relative;
+}
+.span_goods_num{
+    position: absolute;
+    /*display:inline-block;*/
+    height: 0.8rem;
+    width: 0.8rem;
+    top:0.1rem;
+    left: 1.6rem;
+    line-height: 0.8rem;
+    text-align: center;
+}
+
+.img_sub{
+    position: absolute;
+    margin-top: -0.3rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    top:0.6rem;
+    left: 1rem;
+}
+
+.img_add{
+    margin-top: -0.3rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    right: 1rem;
+    top:0.6rem;
+}
+
+.span_goods_sum{
+    width:0.6rem;
+    height: 0.6rem;
+    border-radius: 0.3rem;
+    background: #ff4c25;
+    color: white;
+    text-align: center;
+    line-height: 0.6rem;
+    position: fixed;
+    margin-top:0.5rem;
+    margin-left: 6.5rem;
+    z-index: 999999;
+
+}
+
+
+

@@ -1,0 +1,45 @@
+{% extends 'appOne/base.html' %}
+{% load static %}
+{% block selfResource %}
+
+    <link rel="stylesheet" href="{% static 'cart/css/cart.css' %}">
+    <script src="{% static 'cart/js/cart.js' %}"></script>
+
+{% endblock %}
+
+{% block pageTitle %}
+    {{ pageTitle }}
+{% endblock %}
+
+{% block content %}
+    <span id="top_span"></span>
+    <div id="div_cart">
+
+        <div id="div_cart_top">
+
+        </div>
+
+        <div id="div_cart_bottom">
+
+            {% for orderPro in orderProList %}
+                <div id="div_goods_list">
+                    <div id="div_goods_img"><img src="{{ orderPro.productimg }}"></div>
+                    <div id="div_goods_name">{{ orderPro.productlongname }}</div>
+                    <div id="div_goods_price">{{ orderPro.price }}</div>
+
+                    {% ifequal forloop.counter 1 %}
+                        {% for orderProNum in orderProNumList %}
+                            <div id="div_goods_num">{{ orderProNum }}</div>
+                        {% endfor %}
+                    {% endifequal %}
+
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+    <span id="span_buy"><span id="span_goods_sum_price">￥:{{ priceSum }}</span><span id="span_buy_button">选好了</span></span>
+{% endblock %}
+
+

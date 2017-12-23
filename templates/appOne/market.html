@@ -1,0 +1,91 @@
+{% extends 'appOne/base.html' %}
+{% load static %}
+
+{% block selfResource %}
+    <script src="{% static 'market/js/jquery.cookie.js' %}"></script>
+    <script src="{% static 'market/js/market.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'market/css/market.css' %}">
+
+{% endblock %}
+
+{% block content %}
+    <div id="div_top"><span id="top_span"></span></div>
+    <div id="div_market">
+
+        <div id="div_market_left">
+
+            {% for foottype in foottypeList %}
+                <div class="foottype_name"><span class="green"></span>
+                    <a href="{% url 'axf:markethandle' foottype.typeid  0 0 %}">{{ foottype.typename }}</a>
+                </div>
+            {% endfor %}
+
+        </div>
+
+        <div id="div_market_right">
+
+            <div id="div_right_top">
+                <div id="div_right_top_left">
+                    <div class="btn-group div_dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            全部类型 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+
+                            {% for typechild in category %}
+                                <li>
+                                    <a href="{% url 'axf:markethandle' foodtype typechild.typechildid ordering  %}">{{ typechild.typechildname }}</a>
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+                <div id="div_right_top_right">
+                    <div class="btn-group div_dropdown">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            综合排序 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'axf:markethandle' foodtype childid 0 %}">综合排序</a></li>
+                            <li><a href="{% url 'axf:markethandle' foodtype childid 2 %}">销量最高</a></li>
+                            <li><a href="{% url 'axf:markethandle' foodtype childid 1 %}">价格最低</a></li>
+                            <li><a href="{% url 'axf:markethandle' foodtype childid 3 %}">价格最高</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div id="div_right_bottem">
+
+                <ul id="goods_container">
+                    {% for goods in goodsList %}
+                        <li id="goods_list">
+                            <div id="div_goodslist_one">
+                                <img src="{{ goods.productimg }}" class="img_show">
+                                <div id="div_goodslist_two">
+                                    <p class="p_one">{{ goods.productlongname }}</p>
+                                    <p id="p_goods_price">￥:{{ goods.price }}</p>
+                                    <div id="div_goods_num">
+                                        <img  ga="{{ goods.productid }}" class="img_sub" src="{% static 'market/img/sub.png' %}">
+                                        <span class="span_goods_num">0</span>
+                                        <img ga="{{ goods.productid }}" class="img_add" src="{% static 'market/img/add.png' %}">
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div id="none"></div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <span class="span_goods_sum">{{ goods_sum|default:0 }}</span>
+{% endblock %}
+
+

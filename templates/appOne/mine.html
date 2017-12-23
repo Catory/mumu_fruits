@@ -1,0 +1,43 @@
+{% extends 'appOne/base.html' %}
+{% load static %}
+{% block selfResource %}
+
+    <link rel="stylesheet" href="{% static 'mine/css/mine.css' %}">
+    <script src="{% static 'mine/js/mine.js' %}"></script>
+
+{% endblock %}
+
+{% block pageTitle %}
+    {{ pageTitle }}
+{% endblock %}
+
+{% block content %}
+    <span id="top_span"></span>
+    <div id="div_mine">
+        <div id="div_info_mine">
+            <div id="div_img"></div>
+            <span id="p_username">Hello {{ username }}</span>
+            <p id="p_login"><a href="{% url 'axf:loadlogin' %}">Login</a></p>
+            <p id="p_regedit"><a href="{% url 'axf:loadregedit' %}">Register</a></p>
+        </div>
+
+        <div id="div_menu">
+
+            <table>
+                <tr>
+                    <td><img src="{% static 'mine/img/e.png' %}"></td>
+                    <td><img src="{% static 'mine/img/q.png' %}"></td>
+                    <td><img src="{% static 'mine/img/w.png' %}"></td>
+                    <td><a href="{% url 'axf:orderlist' %}"><img src="{% static 'mine/img/r.png' %}"></a></td>
+                </tr>
+            </table>
+            <span id="span_logout"><a href="{% url 'axf:minelogout' %}">退出当前登录</a></span>
+        </div>
+
+
+
+    </div>
+
+{% endblock %}
+
+

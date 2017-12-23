@@ -1,0 +1,96 @@
+body{
+    padding: 1px;
+    background: white;
+}
+
+#div_mineregedit{
+    margin-top: 1.5rem;
+    position: relative;
+}
+#top_span{
+    width: 100%;
+    height: 1.2rem;
+    background: gold;
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 9999;
+}
+#span_name{
+    width: 0.5rem;
+    height: 0.5rem;
+    display: block;
+}
+
+.input_password{
+    width: 9rem;
+    margin-left: 0.4rem;
+    border-radius: 0.2rem;
+}
+.input_name{
+    width: 9rem;
+    margin-left: 0.4rem;
+    border-radius: 0.2rem;
+}
+#span_name{
+    display: block;
+    width: 100%;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    text-align: center;
+}
+#span_password{
+    display: block;
+    width: 100%;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    text-align: center;
+}
+.input_password_again{
+    width: 9rem;
+    margin-top: 0.7rem;
+    margin-left: 0.4rem;
+    border-radius: 0.2rem;
+}
+
+.input_email{
+    width: 9rem;
+    margin-left: 0.4rem;
+    border-radius: 0.2rem;
+}
+
+form{
+    margin-top: 2rem;
+}
+
+.input_submit{
+    width: 96%;
+    height: 0.8rem;
+    line-height: 0.3rem;
+    text-align: center;
+    margin-top: 1.3rem;
+    margin-left: 2%;
+}
+
+#swiperMustbuy{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    height: 1.6rem;
+    width: 10rem;
+}
+#swiperMustbuy img{
+    width: 100%;
+    height: 100%;
+}
+#div_back{
+    z-index: 99999;
+    position: absolute;
+    top: -1.7rem;
+    left:0.3rem;
+    color: black;
+    width: 0.5rem;
+    height: 1rem;
+}

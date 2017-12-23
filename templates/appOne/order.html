@@ -1,0 +1,68 @@
+{% extends 'appOne/base.html' %}
+{% load static %}
+{% block selfResource %}
+
+    <link rel="stylesheet" href="{% static 'mine/css/order.css' %}">
+    <script type="text/javascript">
+        $(function () {
+            initSwiperMustbuy()
+        });
+
+        function initSwiperMustbuy() {
+
+            var swiper = new Swiper('#swiperMustbuy', {
+                slidesPerView: 1,
+                loop: true,
+                autoplay: 2000,
+            });
+        }
+    </script>
+
+{% endblock %}
+
+
+
+{% block content %}
+    <span id="top_span"></span>
+    <div id="div_cart">
+
+        <div id="div_cart_top">
+
+        </div>
+
+        <div id="div_cart_bottom">
+
+            {% for orderPro in orderProList %}
+                <div id="div_goods_list">
+                    <div id="div_goods_img"><img src="{{ orderPro.productimg }}"></div>
+                    <div id="div_goods_name">{{ orderPro.productlongname }}</div>
+                    <div id="div_goods_price">{{ orderPro.price }}</div>
+
+                    {% ifequal forloop.counter 1 %}
+                        {% for orderProNum in orderProNumList %}
+                            <div id="div_goods_num">{{ orderProNum }}</div>
+                        {% endfor %}
+                    {% endifequal %}
+
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+    <span id="span_buy"><span id="span_goods_sum_price">￥:{{ priceSum }}</span><a href="{% url 'axf:mine' %}"><span
+            id="span_buy_button">返回</span></a></span>
+    <div class="swiper-container" id="swiperMustbuy">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#"><img src="{% static 'mine/img/foot1.png' %}"/></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="{% static 'mine/img/foot2.png' %}"/></a>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+

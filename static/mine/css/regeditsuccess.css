@@ -1,0 +1,54 @@
+body{
+    background: white;
+    padding: 1px;
+}
+
+#div_regedit_success{
+    margin-top: 3rem;
+}
+
+#p_one{
+    width: 5rem;
+    margin:2rem auto;
+    text-align: center;
+}
+
+#p_two{
+    font-size: 0.4rem;
+    margin: -1.5rem auto;
+    text-align: center;
+}
+
+#p_three{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+
+#top_span{
+    width: 100%;
+    height: 1.2rem;
+    background: gold;
+    display: block;
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 9999;
+}
+
+#swiperMustbuy{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    height: 1.6rem;
+    width: 10rem;
+}
+#swiperMustbuy img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+

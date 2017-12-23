@@ -1,0 +1,56 @@
+{% extends 'appOne/base.html' %}
+{% load static %}
+
+{% block selfResource %}
+    <link rel="stylesheet" href="{% static 'mine/css/regeditsuccess.css' %}">
+    <script src="{% static 'mine/js/mineregeditsuccess.js' %}"></script>
+{% endblock %}
+
+{% block pageTitle %}
+
+{% endblock %}
+
+{% block headername %}
+
+{% endblock %}
+
+{% block content %}
+    <span id="top_span"></span>
+    <div id="div_regedit_success">
+
+        <p id="p_one">注册成功 谢谢</p>
+        <p id="p_two">2秒后为您自动跳转 立即跳转请点击登录</p>
+        <a href="{% url 'axf:loadlogin' %}"><p id="p_three">Go!!</p></a>
+    </div>
+    <div class="swiper-container" id="swiperMustbuy">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#"><img src="{% static 'mine/img/foot1.png' %}"/></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="{% static 'mine/img/foot2.png' %}"/></a>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+{% extends 'appOne/base.html' %}
+{% load static %}
+{% block selfResource %}
+
+    <script src="{% static 'mine/js/mineregedit.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'mine/css/mineregedit.css' %}">
+
+{% endblock %}
+
+{% block pageTitle %}
+
+{% endblock %}
+
+{% block headername %}
+
+{% endblock %}
+
+{% block content %}
+    <span id="top_span"></span>
+    <div id="div_mineregedit">
+
+        <form action="{% url 'axf:adduser' %}">
+
+            <input type="text" name="username" placeholder="账号" class="input_name form-control"><span
+                id="span_name"></span>
+            <input class='input_password form-control' type="password" name="password" placeholder="密码">
+            <p></p>
+            <input class='input_password_again form-control' type="password" name="passwordtwo"
+                   placeholder="密码again"><span id="span_password"></span>
+            <input class='input_email form-control' type="email" name="email" placeholder="邮箱">
+            <p></p>
+            <input type="submit" value="注册" class="input_submit btn btn-success">
+
+        </form>
+    <a href="{% url 'axf:mine' %}"><div id="div_back">&lt;</div></a>
+    </div>
+
+    <div class="swiper-container" id="swiperMustbuy">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="#"><img src="{% static 'mine/img/foot1.png' %}"/></a>
+            </div>
+            <div class="swiper-slide">
+                <a href="#"><img src="{% static 'mine/img/foot2.png' %}"/></a>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+
